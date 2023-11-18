@@ -6,8 +6,23 @@ class RecetteBeer extends StatefulWidget {
 }
 
 class _RecetteBeerState extends State<RecetteBeer> {
+
+  int _numPages = 10;
+  int _currentPage = 0;
+
   @override
   Widget build(BuildContext context) {
+
+var pages = List.generate(
+      _numPages,
+      (index) => Center(
+        child: Text(
+          "Page ${index + 1}",
+          style: Theme.of(context).textTheme.headline1,
+        ),
+      ),
+    );
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color.fromARGB(255, 255, 193, 7),

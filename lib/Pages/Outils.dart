@@ -11,24 +11,20 @@ class _OutilsFabricationState extends State<OutilsFabrication> {
   TextEditingController alcoolController = TextEditingController();
   TextEditingController ebcController = TextEditingController();
 
-  String resultatMalt = '';
+  String volumeProd = "";
+  String alcoolRech = "";
+  String ebcRech = "";
 
-  void _onBrasserButtonPressed() {
-    double volume = double.tryParse(volumeController.text) ?? 0;
-    double alcool = double.tryParse(alcoolController.text) ?? 0;
+  double volume = 0;
+  double alcool = 0;
+  double ebc = 0;
+  bool melange = false;
 
-    // Appel à la fonction de calcul
-    String resultat = calculerQuantiteMalt(volume, alcool);
-
-    setState(() {
-      this.resultatMalt = resultat;
-    });
-  }
-
-  String calculerQuantiteMalt(double volume, double alcoolDesire) {
-    double quantiteMalt = (volume * alcoolDesire) / 20;
-    return 'Quantité de malt nécessaire : ${quantiteMalt.toStringAsFixed(2)} kg';
-  }
+  /*  String resultatMalt = Calcul.calculerQuantiteMalt(volume, alcool);
+    String resultatEauBrassage =
+        Calcul.calculerQuantiteEauBrassage(quantiteMalt);
+    String resultatEauRincage =
+        Calcul.calculerQuantiteEauRincage(volume, alcool); */
 
   @override
   Widget build(BuildContext context) {
@@ -68,7 +64,17 @@ class _OutilsFabricationState extends State<OutilsFabrication> {
             Align(
               alignment: Alignment.center,
               child: OutlinedButton(
-                onPressed: _onBrasserButtonPressed,
+                onPressed: () {
+                  volumeProd = volumeController.text;
+                  alcoolRech = alcoolController.text;
+                  ebcRech = ebcController.text;
+                  volume = double.parse(volumeProd);
+                  alcool = double.parse(alcoolRech);
+                  ebc = double.parse(ebcRech);
+                  setState(() {
+                    melange = true;
+                  });
+                },
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all<Color>(
                     Color.fromARGB(255, 255, 193, 7),
@@ -88,12 +94,41 @@ class _OutilsFabricationState extends State<OutilsFabrication> {
               ),
             ),
             SizedBox(height: 20),
-            Text(
-              resultatMalt,
-              style: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.bold,
-              ),
+            Visibility(
+                visible: melange,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Quantité de malt : ${Calcul().calculerQuantiteMalt(volume, alcool)} Kg",
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text(
+                      "Quantité d'eau de brassage : ${Calcul().calculerQuantiteEauBrassage(volume, alcool)} L",
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text(
+                      "Quantité d'eau de rincage : ${Calcul().calculerQuantiteEauRincage(volume, alcool)} L",
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                )
+/*               Text(
+                "Quantité de malt : ${Calcul().calculerQuantiteMalt(volume, alcool)} Kg",
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                ),
+              ), */
             ),
           ],
         ),
