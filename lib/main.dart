@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'Home.dart'; 
 import 'Splash.dart';
 
 void main() {
@@ -17,10 +16,10 @@ class MyApp extends StatelessWidget {
       title: 'BeerMaker',
       theme: ThemeData(
 
-        colorScheme: ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 213, 206, 7)),
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 213, 206, 7)),
         useMaterial3: true,
       ),
-         home: SplashScreen(), 
+         home: const SplashScreen(), 
     );
   }
 }

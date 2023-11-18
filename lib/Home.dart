@@ -16,8 +16,8 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 255, 193, 7),
-        title: Text(
+        backgroundColor: const Color.fromARGB(255, 255, 193, 7),
+        title: const Text(
           'BeerMaker',
           style: TextStyle(color: Colors.black),
         ),
@@ -28,8 +28,8 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            SizedBox(height: 20),
-            Text(
+            const SizedBox(height: 20),
+            const Text(
               'Bienvenue dans Beer Maker !',
               style: TextStyle(
                 fontSize: 30,
@@ -37,17 +37,17 @@ class _MyHomePageState extends State<MyHomePage> {
                 color: Color.fromARGB(255, 0, 0, 0),
               ),
             ),
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             OutlinedButton(
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => RecetteBeer()),
+                  MaterialPageRoute(builder: (context) => const RecetteBeer()),
                 );
               },
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all<Color>(
-                  Color.fromARGB(255, 255, 193, 7),
+                  const Color.fromARGB(255, 255, 193, 7),
                 ),
                 shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                   RoundedRectangleBorder(
@@ -55,24 +55,24 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
               ),
-              child: Text(
+              child: const Text(
                 'Etape de fabrication',
                 style: TextStyle(
                   color: Color.fromARGB(255, 0, 0, 0),
                 ),
               ),
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             OutlinedButton(
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => OutilsFabrication()),
+                  MaterialPageRoute(builder: (context) => const OutilsFabrication()),
                 );
               },
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all<Color>(
-                  Color.fromARGB(255, 255, 193, 7),
+                  const Color.fromARGB(255, 255, 193, 7),
                 ),
                 shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                   RoundedRectangleBorder(
@@ -80,15 +80,15 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
               ),
-              child: Text(
+              child: const Text(
                 'Outils de fabrication',
                 style: TextStyle(
                   color: Color.fromARGB(255, 0, 0, 0),
                 ),
               ),
             ),
-            SizedBox(height: 16),
-            Text("Crée votre bière sans limite !!",
+            const SizedBox(height: 16),
+            const Text("Crée votre bière sans limite !!",
                 style: TextStyle(
                   fontSize: 30,
                 ))

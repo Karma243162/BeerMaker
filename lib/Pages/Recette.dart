@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 
 class RecetteBeer extends StatefulWidget {
+  const RecetteBeer({super.key});
+
   @override
   _RecetteBeerState createState() => _RecetteBeerState();
 }
 
 class _RecetteBeerState extends State<RecetteBeer> {
 
-  int _numPages = 10;
-  int _currentPage = 0;
+  final int _numPages = 10;
+  final int _currentPage = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -18,15 +20,15 @@ var pages = List.generate(
       (index) => Center(
         child: Text(
           "Page ${index + 1}",
-          style: Theme.of(context).textTheme.headline1,
+          style: Theme.of(context).textTheme.displayLarge,
         ),
       ),
     );
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 255, 193, 7),
-        title: Text(
+        backgroundColor: const Color.fromARGB(255, 255, 193, 7),
+        title: const Text(
           'Etape de Fabrication',
           style: TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
         ),
@@ -38,7 +40,7 @@ var pages = List.generate(
           children: <Widget>[
             Container(
               alignment: Alignment.center,
-              child: Text(
+              child: const Text(
                 '0. Phase Préparation',
                 style: TextStyle(
                   fontSize: 18,
@@ -46,15 +48,15 @@ var pages = List.generate(
                 ),
               ),
             ),
-            SizedBox(height: 10),
-            Text(
+            const SizedBox(height: 10),
+            const Text(
               'Vous avez besoin du matériel suivant pour realiser votre bière :',
               style: TextStyle(
                 fontSize: 16,
               ),
             ),
-            SizedBox(height: 10),
-            Column(
+            const SizedBox(height: 10),
+            const Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Text('- Une dame-jeanne'),
@@ -65,13 +67,13 @@ var pages = List.generate(
                 Text('- Une passoire à maille fines'),
               ],
             ),
-            Padding(
-              padding: const EdgeInsets.only(top: 10.0),
+            const Padding(
+              padding: EdgeInsets.only(top: 10.0),
               child: Text(
                 "Le matériel utile à la fabrication doit être propre et stérilisé. Nous vous conseillons ...",
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Container(
               alignment: Alignment.center,
               child: Image.asset(

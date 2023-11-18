@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-import './Pages/Outils.dart';
-
+import 'dart:math';
 
 
 
@@ -31,6 +29,23 @@ class Calcul {
   double calculerQuantiteEauRincage(volume, alcool) {
     return (volume * 1.25) -
         (calculerQuantiteEauBrassage(volume, alcool) * 0.7);
+  }
+
+
+  double quantHoublouAmerisant(volume, alcool) {
+    return volume * 3;
+  }
+
+  double quantHoublouAromatique(volume, alcool) {
+    return volume * 1;
+  }
+
+  double quantLevure(volume, alcool) {
+    return volume / 2;
+  }
+
+  double calculerMaltColorUnits(volume, alcool, ebcRech) {
+    return 4.23 * (ebcRech * calculerQuantiteMalt(volume, alcool) / volume);
   }
 
 }
