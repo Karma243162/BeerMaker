@@ -10,9 +10,10 @@ class _RecetteBeerState extends State<RecetteBeer> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color.fromARGB(255, 255, 193, 7),
         title: Text(
           'Etape de Fabrication',
-          style: TextStyle(color: Color.fromARGB(255, 255, 193, 7)),
+          style: TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
         ),
       ),
       body: Padding(
@@ -41,13 +42,28 @@ class _RecetteBeerState extends State<RecetteBeer> {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Text('-Une damme-jeanne'),
-                Text('-Un barboteur'),
-                Text('-Un thermomètre'),
-                Text('-un Tuyau d extraction'),
-                Text('-plusieurs casseroles'),
-                Text('-une passoire à maille fines'),
+                Text('- Une dame-jeanne'),
+                Text('- Un barboteur'),
+                Text('- Un thermomètre'),
+                Text('- Un Tuyau d extraction'),
+                Text('- Plusieurs casseroles'),
+                Text('- Une passoire à maille fines'),
               ],
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 10.0),
+              child: Text(
+                "Le matériel utile à la fabrication doit être propre et stérilisé. Nous vous conseillons ...",
+              ),
+            ),
+            SizedBox(height: 20),
+            Container(
+              alignment: Alignment.center,
+              child: Image.asset(
+                'assets/step00.png',
+                width: 250,
+                height: 250,
+              ),
             ),
           ],
         ),

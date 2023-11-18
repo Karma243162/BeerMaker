@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'Pages/Recette.dart';
+import 'Pages/Recette.dart'; 
+import 'Pages/Outils.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -27,7 +28,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            SizedBox(height: 20), 
+            SizedBox(height: 20),
             Text(
               'Bienvenue dans Beer Maker !',
               style: TextStyle(
@@ -66,12 +67,12 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => RecetteBeer()),
+                  MaterialPageRoute(builder: (context) => OutilsFabrication()),
                 );
               },
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all<Color>(
-              Color.fromARGB(255, 255, 193, 7),
+                  Color.fromARGB(255, 255, 193, 7),
                 ),
                 shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                   RoundedRectangleBorder(
@@ -87,10 +88,10 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             SizedBox(height: 16),
-            Text("Crée votre bière sans limite !!", 
-            style: TextStyle(
-               fontSize: 30,
-            )) 
+            Text("Crée votre bière sans limite !!",
+                style: TextStyle(
+                  fontSize: 30,
+                ))
           ],
         ),
       ),
