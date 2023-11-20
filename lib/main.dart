@@ -1,3 +1,5 @@
+import 'package:beermaker/Pages/Outils.dart';
+import 'package:beermaker/Pages/Recette.dart';
 import 'package:flutter/material.dart';
 import 'Splash.dart';
 
@@ -20,6 +22,14 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
          home: const SplashScreen(), 
+      routes: {
+        '/splash': (context) => const SplashScreen(),
+        '/recette': (BuildContext context) => const RecetteBeer(),
+        '/outil': (BuildContext context) => const OutilsFabrication(),
+      },
+      initialRoute: "/splash",
     );
+
   }
+  
 }

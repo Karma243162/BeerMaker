@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'Pages/Recette.dart'; 
+import 'Pages/Recette.dart';
 import 'Pages/Outils.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -40,10 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
             const SizedBox(height: 30),
             OutlinedButton(
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const RecetteBeer()),
-                );
+                Navigator.pushNamed(context, '/recette');
               },
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all<Color>(
@@ -65,10 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
             const SizedBox(height: 16),
             OutlinedButton(
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const OutilsFabrication()),
-                );
+                Navigator.pushNamed(context, '/outil');
               },
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all<Color>(
@@ -88,10 +82,10 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             const SizedBox(height: 16),
-            const Text("Crée votre bière sans limite !!",
+            /*  const Text("Crée votre bière sans limite !!",
                 style: TextStyle(
                   fontSize: 30,
-                ))
+                )) */
           ],
         ),
       ),
