@@ -1,16 +1,17 @@
 import 'package:beermaker/Pages/Recette/Recette1.dart';
 import 'package:beermaker/Pages/Recette/Recette4.dart';
-import 'package:beermaker/Pages/Recette/Recette6.dart';
+import 'package:beermaker/Pages/Recette/Recette5.dart';
+import 'package:beermaker/Pages/Recette/Recette7.dart';
 import 'package:flutter/material.dart';
 
-class RecetteBeer5 extends StatefulWidget {
-  const RecetteBeer5({super.key});
+class RecetteBeer6 extends StatefulWidget {
+  const RecetteBeer6({super.key});
 
   @override
-  _RecetteBeer5State createState() => _RecetteBeer5State();
+  _RecetteBeer6State createState() => _RecetteBeer6State();
 }
 
-class _RecetteBeer5State extends State<RecetteBeer5> {
+class _RecetteBeer6State extends State<RecetteBeer6> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,7 +30,7 @@ class _RecetteBeer5State extends State<RecetteBeer5> {
             Container(
               alignment: Alignment.center,
               child: const Text(
-                '4- Le houblonnage',
+                '5- La fermentation',
                 style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
@@ -44,14 +45,14 @@ class _RecetteBeer5State extends State<RecetteBeer5> {
             const Padding(
               padding: EdgeInsets.only(top: 10.0),
               child: Text(
-                "Calculer la quantité de houblon à ajouter. Différentes recettes existent, les houblons peuvent être complétés par des épices. Faites bouillir le moût. Dès que l'ébullition commence, écumer et ajouter le houblon amer. Laisser bouillir ce mélange sans couvrir pendant 1h30 pour retirer de l’amertume. 10-15 minutes avant la fin de cette ébullition, ajouter le houblin aromatique. Retirer le houblon en le filtrant. Éviter cette étape en plaçant le houblon dans un filtre à thé en papier. Le choix du houblon doit être fait en fonction de son taux IBU qui est l’unité d’amertume. ",
+                "Le moût doit être refroidi à une température de 20-25°C pour y incorporer les levures puis transvasé dans la dame-jeanne.utiliser des levures sèches qui sont mieux adaptées pour des petits brassins. Se référer à l’emballage pour déterminer au mieux la quantité appropriée. Il est recommandé d’utiliser pour débuter de la levure S33 qui est polyvalente. Incorporer la levure et remuer la bonbonne pour mélanger. Dans une pièce à 20°C, fermer la bonbonne et placer le barboter (qui permet d’évacuer l’oxygène). Durant environ une semaine, les levures vont travailler et générer du CO2 dans la bonbonne, qui va s’évacuer par le barboteur. Remuer de temps en temps la bonbonne pour faire évacuer le CO2.Lorsqu’il n’y a plus d’activité dans le barboteur, mettre la bouteille de fermentation dans une pièce plus fraîche (autour de 10-15°C, comme une cave par exemple). ",
               ),
             ),
             const SizedBox(height: 20),
             Container(
               alignment: Alignment.center,
               child: Image.asset(
-                'assets/step21.png',
+                'assets/step30.png',
                 width: 250,
                 height: 250,
               ),
@@ -69,7 +70,7 @@ class _RecetteBeer5State extends State<RecetteBeer5> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const RecetteBeer4()),
+                          builder: (context) => const RecetteBeer5()),
                     );
                   },
                 ),
@@ -83,7 +84,7 @@ class _RecetteBeer5State extends State<RecetteBeer5> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const RecetteBeer6()),
+                          builder: (context) => const RecetteBeer7()),
                     );
                   },
                 )

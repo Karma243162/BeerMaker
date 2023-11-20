@@ -1,16 +1,16 @@
 import 'package:beermaker/Pages/Recette/Recette1.dart';
 import 'package:beermaker/Pages/Recette/Recette4.dart';
-import 'package:beermaker/Pages/Recette/Recette6.dart';
+import 'package:beermaker/Pages/Recette/Recette7.dart';
 import 'package:flutter/material.dart';
 
-class RecetteBeer5 extends StatefulWidget {
-  const RecetteBeer5({super.key});
+class RecetteBeer8 extends StatefulWidget {
+  const RecetteBeer8({super.key});
 
   @override
-  _RecetteBeer5State createState() => _RecetteBeer5State();
+  _RecetteBeer8State createState() => _RecetteBeer8State();
 }
 
-class _RecetteBeer5State extends State<RecetteBeer5> {
+class _RecetteBeer8State extends State<RecetteBeer8> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,7 +29,7 @@ class _RecetteBeer5State extends State<RecetteBeer5> {
             Container(
               alignment: Alignment.center,
               child: const Text(
-                '4- Le houblonnage',
+                '7- La mise en bouteille',
                 style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
@@ -44,14 +44,14 @@ class _RecetteBeer5State extends State<RecetteBeer5> {
             const Padding(
               padding: EdgeInsets.only(top: 10.0),
               child: Text(
-                "Calculer la quantité de houblon à ajouter. Différentes recettes existent, les houblons peuvent être complétés par des épices. Faites bouillir le moût. Dès que l'ébullition commence, écumer et ajouter le houblon amer. Laisser bouillir ce mélange sans couvrir pendant 1h30 pour retirer de l’amertume. 10-15 minutes avant la fin de cette ébullition, ajouter le houblin aromatique. Retirer le houblon en le filtrant. Éviter cette étape en plaçant le houblon dans un filtre à thé en papier. Le choix du houblon doit être fait en fonction de son taux IBU qui est l’unité d’amertume. ",
+                "Mettre en bouteille (stérilisées et séchées) en utilisant un tuyau d'extraction avec embout anti-lie. Le but est de récupérer le liquide clair et d’éliminer les précipités et dépots. placer l’embout anti-lie sur le fond de la bonbonne et l’autre bout au fond de la bouteille. La bonbonne doit être placée très en hauteur par rapport à la bouteille. Utiliser des bouteilles en verre teinté propres et sèches, qui ferment avec un bouchon à vis ou à clapet. Les bouteilles doivent être conservées verticalement. Pendant une semaine conserver ces bouteilles à 20°C. Puis pendant 4 à 8 semaines, les gardes au frais, entre 6 et 10°C. La bière se conserve 1 an, idéalement entre 10 et 15°C à l’abri de la lumière ou simplement au réfrigérateur.",
               ),
             ),
             const SizedBox(height: 20),
             Container(
               alignment: Alignment.center,
               child: Image.asset(
-                'assets/step21.png',
+                'assets/step40.png',
                 width: 250,
                 height: 250,
               ),
@@ -69,7 +69,7 @@ class _RecetteBeer5State extends State<RecetteBeer5> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const RecetteBeer4()),
+                          builder: (context) => const RecetteBeer7()),
                     );
                   },
                 ),
@@ -79,13 +79,7 @@ class _RecetteBeer5State extends State<RecetteBeer5> {
                     width: 20,
                     height: 20,
                   ),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const RecetteBeer6()),
-                    );
-                  },
+                  onPressed: () {},
                 )
               ],
             )

@@ -1,16 +1,17 @@
 import 'package:beermaker/Pages/Recette/Recette1.dart';
 import 'package:beermaker/Pages/Recette/Recette4.dart';
 import 'package:beermaker/Pages/Recette/Recette6.dart';
+import 'package:beermaker/Pages/Recette/Recette8.dart';
 import 'package:flutter/material.dart';
 
-class RecetteBeer5 extends StatefulWidget {
-  const RecetteBeer5({super.key});
+class RecetteBeer7 extends StatefulWidget {
+  const RecetteBeer7({super.key});
 
   @override
-  _RecetteBeer5State createState() => _RecetteBeer5State();
+  _RecetteBeer7State createState() => _RecetteBeer7State();
 }
 
-class _RecetteBeer5State extends State<RecetteBeer5> {
+class _RecetteBeer7State extends State<RecetteBeer7> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,7 +30,7 @@ class _RecetteBeer5State extends State<RecetteBeer5> {
             Container(
               alignment: Alignment.center,
               child: const Text(
-                '4- Le houblonnage',
+                '6- Le sucrage',
                 style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
@@ -44,14 +45,14 @@ class _RecetteBeer5State extends State<RecetteBeer5> {
             const Padding(
               padding: EdgeInsets.only(top: 10.0),
               child: Text(
-                "Calculer la quantité de houblon à ajouter. Différentes recettes existent, les houblons peuvent être complétés par des épices. Faites bouillir le moût. Dès que l'ébullition commence, écumer et ajouter le houblon amer. Laisser bouillir ce mélange sans couvrir pendant 1h30 pour retirer de l’amertume. 10-15 minutes avant la fin de cette ébullition, ajouter le houblin aromatique. Retirer le houblon en le filtrant. Éviter cette étape en plaçant le houblon dans un filtre à thé en papier. Le choix du houblon doit être fait en fonction de son taux IBU qui est l’unité d’amertume. ",
+                "Pour relancer la fermentation qui se fera en bouteille et qui permet d’obtenir de la mousse, incorporer 4 à 6 g de sucre par litre de bière.  ",
               ),
             ),
             const SizedBox(height: 20),
             Container(
               alignment: Alignment.center,
               child: Image.asset(
-                'assets/step21.png',
+                'assets/step31.png',
                 width: 250,
                 height: 250,
               ),
@@ -69,7 +70,7 @@ class _RecetteBeer5State extends State<RecetteBeer5> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const RecetteBeer4()),
+                          builder: (context) => const RecetteBeer6()),
                     );
                   },
                 ),
@@ -83,7 +84,7 @@ class _RecetteBeer5State extends State<RecetteBeer5> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const RecetteBeer6()),
+                          builder: (context) => const RecetteBeer8()),
                     );
                   },
                 )
