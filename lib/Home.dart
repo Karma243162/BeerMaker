@@ -17,9 +17,19 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 255, 193, 7),
-        title: const Text(
-          'BeerMaker',
-          style: TextStyle(color: Colors.black),
+        title: Row(
+          children: [
+            Image.asset(
+              'assets/beermakerlogo350.png',
+              width: 40,
+              height: 40,
+            ),
+            const SizedBox(width: 8),
+            const Text(
+              'BeerMaker',
+              style: TextStyle(color: Colors.black),
+            ),
+          ],
         ),
       ),
       body: Align(
